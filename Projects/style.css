@@ -48,11 +48,17 @@ body {
     color: var(--color-white);
     text-decoration: none;
     font-size: 20px;
-    transition: all 0.3s;
+    transition: all 0.2s;
+}
+
+.menu_bar ul li:hover {
+    background: #182330;
 }
 
 .menu_bar ul li a:hover {
     color: var(--color-primary);
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .dropdown_menu {
@@ -107,47 +113,25 @@ body {
 
 .main-schedule h1 {
     text-align: center;
+    
 }
-
-.shtablebr table {
+.shtablebr table, .shtablecs table {
     margin-left: auto;
     margin-right: auto;
 }
 
-.shtablebr table, th, td {
+.shtablebr table, th, td,.shtablecs table, th, td {
     border: 2px solid black;
     border-collapse: collapse;
     text-align: center;
     font-weight: bold;
 }
 
-.shtablebr table th {
+.shtablebr table th, .shtablecs table th {
     color: white;
     background-color: var(--color-primary);
 }
 
-.shtablebr table tr {
+.shtablebr table tr, .shtablecs table tr {
     height: 50px;
-}
-
-.shtablecs table {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.shtablecs table, th, td {
-    border: 2px solid black;
-    border-collapse: collapse;
-    text-align: center;
-    font-weight: bold;
-}
-
-.shtablecs table th {
-    color: white;
-    background-color: var(--color-primary);
-}
-
-.shtablecs table tr {
-    height: 50px;
-
 }
