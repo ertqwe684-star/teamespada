@@ -1,0 +1,64 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='logacs.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Create new Login Access</title>
+    <script src="{{ url_for('static', filename='loginesp.js') }}"></script>
+</head>
+<body>
+    <div class="menu_bar">
+    <h1 class="logo">TEAM<span> ESPADA</span></h1>
+    </div>
+    <div class="msg">
+        <h3><span>Disclaimer : </span>After creating the access, it will activate within 24 hours. The member can login using the unique username and password once if he / she receives the email. After loging into it the members are requested to change their password. If the member had forgoten the password, he / she has contact the Admin (Guild Leader). It will take 48 hours to change the password if the member doesn't remember the password.</h3>
+    </div>
+    <div class="container">
+        <form action="/success" method="post">
+            <h1>NEW MEMBER LOGIN ACCESS</h1>
+            </br>
+            <hr>
+            </br>
+            <div class="input_box">
+                <label for="plynam"><b>Player Name (Same as in FF MAX) :</b></label>
+                <input type="text" name="nu" required maxlength="25">
+            </div>
+            <div class="input_box">
+                <label for="UID"><b>Player UID :</b></label>
+                <input type="text" name="uid" required maxlength="11">
+            </div>
+            <div class="rle">
+                <label for="role"><b>Select the role of the player :</b></label>
+                <select name="category" id="category" required>
+                    <option value="" selected disabled>Choose</option>
+                    <option value="GL">Guild Leader</option>
+                    <option value="AGL">Acting Guild Leader</option>
+                    <option value="ELDER">Elder</option>
+                    <option value="MEMBER">Member</option>
+                </select>
+            </div>
+            <div class="input_box">
+                <label for="Username"><b>Username :</b></label>
+                <input type="text" name="un" required>
+            </div>
+            <div class="input_box">
+                <label for="passkey"><b>Password :</b></label>
+                <input type="password" name="key" required>
+            </div>
+            <div class="t&c_box">
+                <input type="checkbox" name="tc" required style="cursor: pointer;">
+                <label for="tandc"><b>I accept the <a href="#" style="color: blue;text-decoration: none;">Terms & Conditions</a></b></label>
+            </div>
+            {%if key is defined%}
+            <div id="error" style="color: rgba(16, 228, 104, 0.959);"><h3>{{ key }}</h3></div>
+            {% endif %}
+            <button type="submit">Create</button>
+        </form>
+    </div>
+    <div style="margin-top: 50px;margin-bottom: 10px;padding: 5px;">
+        <h5>TEAM ESPADA ADMIN:</h5>
+    </div>
+</body>
+</html>

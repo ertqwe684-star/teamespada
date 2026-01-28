@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='curr.css') }}">
+    <title>Current Tournaments</title>
+</head>
+<body>
+    <div class="menu_bar">
+    <h1 class="logo">TEAM<span> ESPADA</span></h1>
+    </div>
+    <div class="page">
+        <div class="box">
+            {% for i in events %}
+            <div class="container">
+                <a href="#">
+                <div style="padding: 20px;">
+                    <h3>{{ i[0] }} TOURNAMENT</h3>
+                    <h3>{{ i[1] }} - {{ i[2] }}</h3>
+                </div></a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

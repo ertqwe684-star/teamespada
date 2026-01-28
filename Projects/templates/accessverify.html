@@ -1,0 +1,41 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='acverify.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Verify Access</title>
+    <script src="{{ url_for('static', filename='loginesp.js') }}"></script>
+</head>
+<body>
+    <div class="menu_bar">
+    <h1 class="logo">TEAM<span> ESPADA</span></h1>
+    <ul>
+        <li1 style="color: #e9e9e9;font-weight: bold;font-size: 25px;">ADMIN ACCESS VERIFY</li1>
+    </ul>
+    </div>
+    <div class="welmsg">
+        <h2>Welcome Guild Leader (ESP S4NDY 18)!. Please verify your access card to login and control</h2>
+    </div>
+    <div class="container">
+        <form method="post" onsubmit="loginverifyesp(this,event)">
+            <h1>ADMIN ACCESS VERIFIER</h1>
+            </br>
+            <hr>
+            </br>
+            <div class="input_box">
+                <label for="Username"><b>Card Number :</b></label>
+                <input type="text" name="nu" required maxlength="12">
+            </div>
+            <div class="inputdt_box">
+                <label for="validthru"><b>Valid thru :</b></label>
+                <input type="month" name="vdt" required>
+                <div class="inputpin_box"><label for="pin"><b>PIN :</b></label><input type="password" name="pin" required maxlength="4"></div>
+            </div>
+            <div id="error" style="color: red;"></div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>

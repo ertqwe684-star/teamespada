@@ -1,0 +1,89 @@
+body {
+margin: 0;
+font-family: 'Poppins', sans-serif;
+}
+
+.msg {
+    padding: 0 20px;
+    margin-top: 15px;
+}
+
+.msg h3 span {
+    color: red;
+    font-weight: bold;
+}
+
+.container form {
+    margin: 10vh auto 0 auto;
+    background-color: rgb(255, 235, 252);
+    border-radius: 5px;
+    width: 95%;
+    padding: 30px;
+    height: 650px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+}
+
+.container form h1 {
+    text-align: center;
+    color: #090979;
+    word-spacing: 5px;
+}
+
+.container form button {
+    background-color: #0aac1f;
+    color: white;
+    font-weight: bold;
+    border: 1px #0aac1f;
+    padding: 10px;
+    width: 100px;
+    font-size: 15px;
+    border-radius: 6px;
+    margin: 20px 0px;
+    cursor: pointer;
+    float: right;
+}
+
+.input_box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input_box input {
+    border-radius: 6px;
+    padding: 10px;
+    margin-top: 5px;
+    width: 75%;
+    border: 1px solid #090979;
+    font-size: 15px;
+}
+
+.rle {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.rle select {
+    margin-top: 5px;
+    width: 35%;
+    border-radius: 5px;
+    height: 35px;
+    font-size: 15px;
+    border: 1px solid #090979;
+    cursor: pointer;
+}
+
+.rle select:focus {
+    outline: 0;
+}
+
+.input_box input:focus {
+    outline: 0;
+}
+
+@media screen and (min-width: 900px){
+    .container form {
+        width: 50%;
+    }
+}

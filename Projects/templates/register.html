@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='reg.css') }}">
+    <title>Tournament Registration</title>
+</head>
+<body>
+    <div class="menu_bar">
+        <h1 class="logo">TEAM <span>ESPADA</span></h1>
+    </div>
+    <div class="content">
+        <div class="container">
+            {% if status is defined %}
+            <h2>{{ status }}</h2>
+            <div class="inputs">
+            <button onclick="window.location.href='/';">OK</button></div>
+            {% else %}
+            <form action="/regsuccess" method="post">
+                <h2>CLASH SQUAD TOURNAMENT REGISTRATION</h2>
+                {% if exist is defined %}
+                <div class="exist">
+                    <h3>{{ exist }}</h3>
+                </div>
+                {% endif %}
+                <div class="inputs">
+                <hr>
+                <div class="input-box">
+                    <label for="email">Enter your email :</label><br>
+                    <input type="email" name="email" required>
+                </div>
+                <div class="input-box">
+                    <label for="tname">Enter your Team name :</label><br>
+                    <input type="text" name="tname" required>
+                </div>
+                <hr>
+                <h3 style="margin: 0;">Enter all the names as in FF MAX</h3>
+                <hr><h3>TEAM LEADER'S DETAILS</h3>
+                <div class="input-box">
+                    <label for="p1">Enter Team Leader's name :</label><br>
+                    <input type="text" name="p1" required>
+                </div>
+                <div class="input-box">
+                    <label for="uid1">Enter Team Leader's UID :</label><br>
+                    <input type="text" name="uid1" required>
+                </div><hr><h3>PLAYER 2 DETAILS</h3>
+                <div class="input-box">
+                    <label for="p2">Enter Player 2 name :</label><br>
+                    <input type="text" name="p2" required>
+                </div>
+                <div class="input-box">
+                    <label for="uid2">Enter Player 2 UID :</label><br>
+                    <input type="text" name="uid2" required>
+                </div><hr><h3>PLAYER 3 DETAILS</h3>
+                <div class="input-box">
+                    <label for="p3">Enter Player 3 name :</label><br>
+                    <input type="text" name="p3" required>
+                </div>
+                <div class="input-box">
+                    <label for="uid3">Enter Player 3 UID :</label><br>
+                    <input type="text" name="uid3" required>
+                </div><hr><h3>PLAYER 4 DETAILS</h3>
+                <div class="input-box">
+                    <label for="p4">Enter Player 4 name :</label><br>
+                    <input type="text" name="p4" required>
+                </div>
+                <div class="input-box">
+                    <label for="uid4">Enter Player 4 UID :</label><br>
+                    <input type="text" name="uid4" required>
+                </div>
+                <div style="text-align: right; margin: 10px;">
+                    <button>Register</button>
+                </div>
+                </div>
+            </form>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.menu_bar {
+    background-color: #141d28;
+    padding: 5px 25px;
+}
+
+.logo {
+    color: #e9e9e9;
+    font-size: 25px;
+    margin-left: 30px;
+}
+
+.logo span {
+    color: #0073ff;
+}
+
+.box {
+    width: 100%;
+    margin: 2px;
+    animation: entrance_anim 1.6s ease 0s 1 normal forwards;
+}
+
+@keyframes entrance_anim {
+	0% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.container {
+    background-color: #fbffe4;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid rgb(163, 163, 163);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    margin: 30px 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container:hover {
+    box-shadow: 0 4px 8px rgba(96, 146, 255, 0.575), 0 8px 16px rgba(0, 174, 255, 0.397);
+    background: #B3B3B3;
+    background: radial-gradient(circle, rgba(179, 179, 179, 0.23) 42%, rgba(94, 102, 255, 0.26) 73%);
+    transition: 0.6s;
+    transform: scale(1.05);
+}
+
+.container hr {
+    border: 1px solid;
+    color: rgb(20, 20, 133);
+}
+
+.container h4 {
+    margin: 12px;
+    color: #ff4848;
+    word-spacing: 4px
+}
+
+.content {
+    padding: 10px;
+}
+
+.content ul {
+    margin-top: 10px;
+}
+
+.content ul li {
+    margin: 14px;
+    font-size: 18px;
+    color: #ff1212;
+}
+
+.content ul li a {
+    color: #ff1212bb;
+    text-decoration: none;
+}
+
+.content ul li a:hover {
+    text-decoration: underline;
+    color: #ff1212;
+}
+
+.tourcontent {
+    padding: 10px;
+}
+
+.tourcontent ul {
+    margin-top: 10px;
+}
+
+.tourcontent ul li {
+    margin: 14px;
+    font-size: 18px;
+    color: #2b5f26;
+}
+
+.tourcontent ul li a {
+    color: #2e8049d5;
+    text-decoration: none;
+}
+
+.tourcontent ul li a:hover {
+    text-decoration: underline;
+    color: #00cf0a;
+}
+
+.glwarcontent {
+    padding: 10px;
+}
+
+.glwarcontent ul {
+    margin-top: 10px;
+}
+
+.glwarcontent ul li {
+    margin: 14px;
+    font-size: 18px;
+    color: #26545f;
+}
+
+.glwarcontent ul li a {
+    color: #662e80da;
+    text-decoration: none;
+}
+
+.glwarcontent ul li a:hover {
+    text-decoration: underline;
+    color: #a600cf;
+}
+
+@media screen and (min-width: 1256px) {
+    .box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+    }
+
+    .container {
+        width: 27%;
+        margin: 0;
+    }
+}

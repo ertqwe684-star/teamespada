@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>TEAM <span style="color: #0073ff;">ESPADA</span></h2>
+    <p>Hi  {{ leader }},<br>
+    Your Registration has been successfully received. You have booked for <b>'TEAM  ESPADA's  CS  SCRIMS'</b> . You will be notified via email for Room ID and Password will be <b>0101.</b></p>
+    <br>
+    <table width="600" cellpadding="0" cellspacing="0" align="center"
+       style="border-collapse:collapse; font-family:Arial, sans-serif; border:2px solid #003366;">
+
+    <!-- HEADER -->
+    <tr>
+        <td colspan="4"
+            style="background-color:#0b1e33; color:#ffffff; text-align:center;
+                   font-weight:bold; padding:10px; font-size:16px;">
+            CLASH SQUAD SCRIMS
+        </td>
+    </tr>
+
+    <!-- DATE & TIME -->
+    <tr>
+        <td colspan="2"
+            style="background-color:#f7931e; color:#ffffff; text-align:center;
+                   font-weight:bold; padding:8px;border: 2px solid black;">
+            DATE : 25/01/2026
+        </td>
+        <td colspan="2"
+            style="background-color:#f7931e; color:#ffffff; text-align:center;
+                   font-weight:bold; padding:8px;border: 2px solid black;">
+            TIME : 22:00
+        </td>
+    </tr>
+
+    <!-- TEAM NAME -->
+    <tr>
+        <td colspan="4"
+            style="background-color:#ccff00; color:#000000; text-align:center;
+                   font-weight:bold; padding:8px;border: 2px solid black;">
+            TEAM NAME : {{ tname }}
+        </td>
+    </tr>
+
+    <!-- TABLE HEADERS -->
+    <tr>
+        <td rowspan="2" width="150"
+            style="background-color:#0072ff; color:#ffffff; text-align:center;
+                   font-weight:bold; padding:10px; border:1px solid #003366;">
+            TEAM<br>LEADER<br>DETAILS
+        </td>
+        <td
+            style="background-color:#0072ff; color:#ffffff; text-align:center;
+                   font-weight:bold; padding:10px; border:1px solid #003366;">
+            PLAYER NAME
+        </td>
+        <td
+            style="background-color:#0072ff; color:#ffffff; text-align:center;
+                   font-weight:bold; padding:10px; border:1px solid #003366;">
+            UID
+        </td>
+        <td
+            style="background-color:#0072ff; color:#ffffff; text-align:center;
+                   font-weight:bold; padding:10px; border:1px solid #003366;">
+            PAID
+        </td>
+    </tr>
+
+    <!-- TEAM LEADER -->
+    <tr>
+        <td style="padding:10px; border:1px solid #003366; text-align:center;font-weight: bold;">
+            {{ leader }}
+        </td>
+        <td style="padding:10px; border:1px solid #003366; text-align:center;font-weight: bold;">
+            {{ leader_uid }}
+        </td>
+        <td rowspan="4"
+            style="padding:10px; border:1px solid #003366;
+                   text-align:center; font-weight:bold;">
+            ₹100.00
+        </td>
+    </tr>
+
+    <!-- TEAM MEMBERS -->
+    <tr>
+        <td rowspan="3"
+            style="background-color:#0072ff; color:#ffffff; text-align:center;
+                   font-weight:bold; padding:10px; border:1px solid #003366;">
+            TEAM<br>MEMBERS
+        </td>
+        <td style="padding:10px; border:1px solid #003366; text-align:center;font-weight: bold;">
+            {{ pla2 }}
+        </td>
+        <td style="padding:10px; border:1px solid #003366; text-align:center;font-weight: bold;">
+            {{ pla2_uid }}
+        </td>
+    </tr>
+
+    <tr>
+        <td style="padding:10px; border:1px solid #003366; text-align:center;font-weight: bold;">
+            {{ pla3 }}
+        </td>
+        <td style="padding:10px; border:1px solid #003366; text-align:center;font-weight: bold;">
+            {{ pla3_uid }}
+        </td>
+    </tr>
+
+    <tr>
+        <td style="padding:10px; border:1px solid #003366; text-align:center;font-weight: bold;">
+            {{ pla4 }}
+        </td>
+        <td style="padding:10px; border:1px solid #003366; text-align:center;font-weight: bold;">
+            {{ pla4_uid }}
+        </td>
+    </tr>
+</table>
+
+<p><b>These are the Details of your team. Stay tuned for Room ID. <br>
+Note : The above mentioned players are only allowed to the tournament.
+<br>Password : 0101</b></p>
+<p><b>Before joining the tournament your are supposed to refer the <a href="https://rawcdn.githack.com/ertqwe684-star/teamespada/e77ef0bbabadcca5cfdfab24ff8fd9d4acae441f/Projects/rules.html" style="color: blue;">rules listed here.</a></b></p>
+<p>With Regards,<br>TEAM ESPADA.</p>
+
+    <p><b>
+        Disclaimer:  <span style="color: red;">After 10 minutes if no players are joined inside the room the match will be considered as abandoned and the money will be detected and will not be refund to you.</span>
+    </b></p>
+    <p>This is a computer generated email.</p>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Tournament Schedule</title>
+</head>
+<body>
+    <div class="menu_bar">
+    <h1 class="logo"><a href="http://127.0.0.1:5000/" style="text-decoration: none;color: #e9e9e9;">TEAM<span> ESPADA</span></a></h1>
+    </div>
+    <div class="main-schedule">
+        <div>
+        </br>
+        </br>
+        <h1>
+            SCHEDULE
+        </h1>
+        </br>
+        </br>
+        </div>
+        <div class="shtablebr">
+        {% if br_status is defined %}
+        <hr><br>
+        <table>
+            <thead>
+                <tr><td colspan="5" style="background-color: #141d28; color: white;">BATTLE ROYALE</td></tr>
+                <tr><td colspan="5" style="background-color: #ccff00; color: black; height: 80px;">No Tournaments</td></tr>
+            </thead>
+        </table>
+        {% endif %}
+        {% if br_soloevents!=[] %}
+        <hr><br>
+        <table>
+            <thead>
+                <tr><td colspan="5" style="background-color: #141d28; color: white;">BATTLE ROYALE</td></tr>
+                <tr><td colspan="5" style="background-color: #ccff00; color: black;">CATEGORY : SOLO</td></tr>
+                <tr><td colspan="5" style="background-color: #ccff00; color: black;">DATE :  {{ br_soloevents[0][0] }} - {{ br_soloevents[solo_len-1][0] }}</td></tr>
+                <tr>
+                    <th>DATE</th>
+                    <th>DAY</th>
+                    <th>TIME</th>
+                    <th>EVENT</th>
+                    <th>STATUS</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for j in br_soloevents %}
+                <tr>
+                    <td>{{ j[0] }}</td>
+                    <td>{{ j[1] }}</td>
+                    <td>{{ j[2] }}</td>
+                    <td>{{ j[3] }}</td>
+                    <td></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+        {% if br_duoevents!=[] %}
+        <br><hr><br>
+        <table>
+            <thead>
+                <tr><td colspan="5" style="background-color: #141d28; color: white;">BATTLE ROYALE</td></tr>
+                <tr><td colspan="5" style="background-color: #ccff00; color: black;">CATEGORY : DUO</td></tr>
+                <tr><td colspan="5" style="background-color: #ccff00; color: black;">DATE :  {{ br_duoevents[0][0] }} - {{ br_duoevents[duo_len-1][0] }}</td></tr>
+                <tr>
+                    <th>DATE</th>
+                    <th>DAY</th>
+                    <th>TIME</th>
+                    <th>EVENT</th>
+                    <th>STATUS</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in br_duoevents %}
+                <tr>
+                    <td>{{ i[0] }}</td>
+                    <td>{{ i[1] }}</td>
+                    <td>{{ i[2] }}</td>
+                    <td>{{ i[3] }}</td>
+                    <td></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+        {% if br_squadevents!=[] %}
+        <br><hr><br>
+        <table>
+            <thead>
+                <tr><td colspan="5" style="background-color: #141d28; color: white;">BATTLE ROYALE</td></tr>
+                <tr><td colspan="5" style="background-color: #ccff00; color: black;">CATEGORY : SQUAD</td></tr>
+                <tr><td colspan="5" style="background-color: #ccff00; color: black;">DATE :  {{ br_squadevents[0][0] }} - {{ br_squadevents[squad_len-1][0] }}</td></tr>
+                <tr>
+                    <th>DATE</th>
+                    <th>DAY</th>
+                    <th>TIME</th>
+                    <th>EVENT</th>
+                    <th>STATUS</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for k in br_squadevents %}
+                <tr>
+                    <td>{{ k[0] }}</td>
+                    <td>{{ k[1] }}</td>
+                    <td>{{ k[2] }}</td>
+                    <td>{{ k[3] }}</td>
+                    <td></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+        </div>
+        </br>
+        </br>
+        <hr>
+        </br>
+        </br>
+        <div class="shtablecs">
+            <table>
+                <thead>
+                    <tr><td colspan="5" style="background-color: #141d28; color: white;">CLASH SQUAD</td></tr>
+                    {% if cs_events!=[] %}
+                    <tr><td colspan="5" style="background-color: #ccff00; color: black;">DATE :  {{ cs_events[0][0] }} - {{ cs_events[cs_len-1][0] }}</td></tr>
+                    <tr>
+                        <th>DATE</th>
+                        <th>DAY</th>
+                        <th>TIME</th>
+                        <th>EVENT</th>
+                        <th>STATUS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for j in cs_events %}
+                    <tr>
+                        <td>{{ j[0] }}</td>
+                        <td>{{ j[1] }}</td>
+                        <td>{{ j[2] }}</td>
+                        <td>{{ j[3] }}</td>
+                        <td></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                {% else %}
+                    <tr><td colspan="5" style="background-color: #ccff00; color: black; height: 80px;">No Tournaments</td></tr>
+                {% endif %}
+            </table>
+            </div>
+            </br>
+            </br>
+            <hr>
+            </br>
+            </br>
+            </br>
+    </div>
+</body>
+</html>

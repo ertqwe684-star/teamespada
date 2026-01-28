@@ -1,0 +1,53 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='adminpg.css') }}">
+    <title>Admin</title>
+</head>
+<body>
+    <div class="menu_bar">
+    <h1 class="logo">TEAM<span> ESPADA</span></h1>
+    </div>
+    <div class="adminpge" style="margin: 50px; margin-top: 75px;">
+        <div class="box">
+            <div class="container">
+                <h2 style="text-align: center;margin: 10px;color: hsl(352, 100%, 60%);text-shadow: 1px 1px #472e2ef6;">LOGIN ACCESS</h2>
+                <hr>
+                <h4>You're allowed to control the login access of your guild members. You can also grant access to specific members of your guild by creating a unique username and password.</h4>
+                <div class="content">
+                    <ul>
+                        <li><a href="/adminhome/newloginaccess">Grant Login Access</a></li>
+                        <li><a href="#">Current Login Access</a></li>
+                        <li><a href="#">Revoke Login Access Permanently</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <h2 style="text-align: center;margin: 10px;color: #7100e9;text-shadow: 1px 1px rgb(83, 45, 90);">TOURNAMENT</h2>
+                <hr>
+                <h4 style="margin: 12px;color: #ff4bba;word-spacing: 4px;">Tournaments are essential to identify a player's skill. The Admin can host and control the tournaments by logining using their credentials.The Admin can also view and publish the results.</h4>
+                <div class="tourcontent">
+                    <ul>
+                        <li><a href="/adminhome/tourhost">Host a Tournament</a></li>
+                        <li><a href="/adminhome/currenttournaments">Current tournaments</a></li>
+                        <li><a href="#">Results</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <h2 style="text-align: center;margin: 10px;color: #ffc916;text-shadow: 1px 1px rgb(80, 52, 17);">GUILD WARS</h2>
+                <hr>
+                <h4 style="margin: 12px;color: #574bff;word-spacing: 4px;margin: 15px;">GUILD WAR SEASON 10<br>BATTLE ROYALE<br><br>Enter the points scored by each player in Guild war. You can enter the points before Monday. Every Monday the points will be locked at 06:59 PM (+05:30 GMT) and no longer editable.</h4>
+                <div class="glwarcontent">
+                    <ul>
+                        <li><a href="#">Points Table / Scoreboard</a></li>
+                        <li><a href="#">Reward Redemption Requests</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

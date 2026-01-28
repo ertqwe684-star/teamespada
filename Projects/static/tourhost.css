@@ -1,0 +1,86 @@
+.hosttourtb {
+    margin: 70px;
+}
+
+.cty_select {
+    margin-left: 25px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(255, 200, 209, 0.897);
+    border-radius: 10px;
+}
+
+.cty_select label {
+    font-weight: bold;
+    font-size: large;
+}
+
+.cty_select select {
+  background-color: #f2f2f2;
+  color: #333;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cty_select select:focus{
+    outline: 0;
+}
+
+.cty_select select option {
+  font-weight: bold;
+}
+
+.hosttourtb {
+    margin: 10vh auto 0 auto;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+}
+
+.hosttourtb table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hosttourtb table th {
+    background-color: #002891;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.hosttourtb table td input {
+    padding: 10px 25px;
+    font-size: large;
+}
+
+.hosttourtb table td input:focus {
+    outline: 0;
+}
+
+.hosttourtb table,.hosttourtb table th,.hosttourtb table td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.hosttourtb tr {
+    height: 50px;
+}
+
+.hosttourtb button {
+    background-color: #0aac1f;
+    color: white;
+    font-weight: bold;
+    border: 1px #0aac1f;
+    padding: 10px;
+    width: 100px;
+    font-size: 15px;
+    border-radius: 6px;
+    margin: 20px 0px;
+    cursor: pointer;
+}

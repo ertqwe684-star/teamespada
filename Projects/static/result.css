@@ -1,0 +1,43 @@
+.resbox {
+    margin: 80px;
+    padding: 10px;
+}
+
+.tourdetails {
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb(227, 233, 235);
+    border: 1px solid rgb(104, 104, 104);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    border-radius: 8px;
+}
+
+.tourdetails h4 {
+    margin: 10px;
+}
+
+.resptstbl {
+    padding: 10px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.resptstbl table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.resptstbl table,.resptstbl table th,.resptstbl table td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+}
+
+.resptstbl table th {
+    color: white;
+    background-color: rgb(26, 51, 136);
+}
