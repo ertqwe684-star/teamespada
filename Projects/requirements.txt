@@ -1,2 +1,4 @@
 flask
+flask_mail
 mysql-connector-python
+bcrypt
